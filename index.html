@@ -1,194 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pawan Baba Jan Sewa Kendra</title>
 
 <style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#f4f6f8;
-}
-header{
-  background:#0d6efd;
-  color:#fff;
-  padding:25px;
-  text-align:center;
-}
-section{
-  background:#fff;
-  margin:15px;
-  padding:15px;
-  border-radius:10px;
-}
-h2{
-  color:#0d6efd;
-}
-.operator{
-  display:flex;
-  align-items:center;
-  gap:15px;
-}
-.operator img{
-  width:90px;
-  height:90px;
-  border-radius:50%;
-  border:3px solid #0d6efd;
-}
-.services{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-}
-.service{
-  padding:12px;
-  background:#f1f1f1;
-  border-radius:8px;
-  text-align:center;
-  cursor:pointer;
-}
-.service:hover{
-  background:#0d6efd;
-  color:#fff;
-}
-input,select,button{
-  width:100%;
-  padding:10px;
-  margin-top:8px;
-  border-radius:6px;
-  border:1px solid #ccc;
-}
-button{
-  background:#0d6efd;
-  color:#fff;
-  border:none;
-  font-size:16px;
-}
-iframe{
-  width:100%;
-  border-radius:10px;
-}
-.social a{
-  display:block;
-  text-decoration:none;
-  margin:6px 0;
-  color:#0d6efd;
-  font-weight:bold;
-}
-footer{
-  text-align:center;
-  padding:15px;
-  background:#222;
-  color:#fff;
-}
-.whatsapp{
-  position:fixed;
-  right:15px;
-  bottom:15px;
-  background:#25d366;
-  color:#fff;
-  padding:12px 18px;
-  border-radius:30px;
-  text-decoration:none;
-}
+body{margin:0;font-family:Arial;background:#f4f6f8}
+header{background:#0d6efd;color:#fff;text-align:center;padding:25px}
+section{background:#fff;margin:15px;padding:15px;border-radius:12px}
+h2{color:#0d6efd}
+.operator{display:flex;gap:15px;align-items:center}
+.operator img{width:90px;height:90px;border-radius:50%;border:3px solid #0d6efd}
+.services{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.service{border:1px solid #ddd;padding:14px;border-radius:10px;text-align:center;font-weight:bold;cursor:pointer}
+.service:hover{background:#eaf2ff}
+input,select,button{width:100%;padding:12px;margin-bottom:10px;border-radius:8px;border:1px solid #ccc}
+button{background:#0d6efd;color:#fff;border:none;font-size:16px}
+.note{font-size:13px;color:gray}
+.social a{display:block;margin:6px 0;color:#0d6efd;font-weight:bold;text-decoration:none}
+.whatsapp{position:fixed;right:15px;bottom:15px;background:#25D366;color:#fff;padding:12px 18px;border-radius:30px;text-decoration:none;font-weight:bold}
+footer{background:#222;color:#fff;text-align:center;padding:12px;font-size:14px}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Pawan Baba Jan Sewa Kendra</h1>
-  <p>All Government & Online Services</p>
+<h1>Pawan Baba Jan Sewa Kendra</h1>
+<p>All Government & Online Services</p>
 </header>
 
 <section>
-  <h2>👤 Operator</h2>
-  <div class="operator">
-    <img src="https://i.ibb.co/5g0ng1T8/BABA-DIGITAL-HUB.png">
-    <div>
-      <b>Pawan Baba</b><br>
-      Jan Sewa Kendra Operator
-    </div>
-  </div>
+<h2>👤 Operator</h2>
+<div class="operator">
+<img src="https://i.ibb.co/5g0ng1T8/BABA-DIGITAL-HUB.png">
+<div>
+<b>Pawan Baba</b><br>
+Jan Sewa Kendra Operator
+</div>
+</div>
 </section>
 
 <section>
-  <h2>🛠 Hamari Services</h2>
-  <div class="services">
-    <div class="service" onclick="sendService('Aadhaar Service')">Aadhaar Services</div>
-    <div class="service" onclick="sendService('PAN Card')">PAN Card</div>
-    <div class="service" onclick="sendService('Ayushman Card')">Ayushman Card</div>
-    <div class="service" onclick="sendService('Ration Card')">Ration Card</div>
-    <div class="service" onclick="sendService('Income Certificate')">Income / Caste</div>
-    <div class="service" onclick="sendService('Online Form')">Online Forms</div>
-  </div>
+<h2>🛠️ Hamari Services</h2>
+<div class="services">
+<div class="service" onclick="sendService('Aadhaar Service')">Aadhaar Services</div>
+<div class="service" onclick="sendService('PAN Card')">PAN Card</div>
+<div class="service" onclick="sendService('Ayushman Card')">Ayushman Card</div>
+<div class="service" onclick="sendService('Ration Card')">Ration Card</div>
+<div class="service" onclick="sendService('Income / Caste Certificate')">Income / Caste</div>
+<div class="service" onclick="sendService('Online Forms')">Online Forms</div>
+</div>
 </section>
 
 <section>
-  <h2>📩 Online Enquiry (WhatsApp)</h2>
-  <input id="name" placeholder="Apna Naam Likhe">
-  <input id="mobile" placeholder="10 digit mobile number">
-  <select id="service">
-    <option>Aadhaar Service</option>
-    <option>PAN Card</option>
-    <option>Ayushman Card</option>
-    <option>Ration Card</option>
-    <option>Income / Caste</option>
-  </select>
-  <button onclick="sendWhatsApp()">WhatsApp Par Bheje</button>
+<h2>📦 Subscription Plans</h2>
+<div class="services">
+<div class="service" onclick="subscribePlan('Starter Plan - ₹45/month')">
+<b>Starter Plan</b><br>
+₹45 / Month<br>
+Aadhaar, PAN, Online Forms
+</div>
+</div>
+<p class="note">Payment ke baad WhatsApp par screenshot bheje</p>
 </section>
 
 <section>
-  <h2>💰 Online Payment (UPI)</h2>
-  <p>QR scan karke payment karein</p>
-  <img src="upi-qr.jpg" style="width:230px;border:1px solid #ccc;border-radius:10px">
-  <p><b>UPI ID:</b> gpay-11264623678@okbizaxis</p>
-  <p>Payment ke baad WhatsApp par screenshot bheje</p>
+<h2>📩 Online Enquiry</h2>
+<input id="name" placeholder="Apna Naam">
+<input id="mobile" placeholder="10 digit mobile number">
+<select id="service">
+<option>Aadhaar Service</option>
+<option>PAN Card</option>
+<option>Ayushman Card</option>
+<option>Ration Card</option>
+<option>Income / Caste</option>
+<option>Subscription ₹45</option>
+</select>
+<button onclick="sendWhatsApp()">WhatsApp Par Bheje</button>
 </section>
 
 <section>
-  <h2>🎥 YouTube Video</h2>
-  <iframe height="220"
-    src="https://www.youtube.com/embed/JjEzapwtH7Y"
-    allowfullscreen>
-  </iframe>
+<h2>💳 Online Payment (UPI)</h2>
+<p>QR scan karke payment karein</p>
+<img src="upi-qr.jpg" style="width:230px;border:1px solid #ccc;border-radius:10px">
+<p><b>UPI ID:</b> gpay-11264623678@okbizaxis</p>
+<p class="note">Payment ke baad WhatsApp par screenshot bheje</p>
 </section>
 
 <section>
-  <h2>🌐 Social Media</h2>
-  <div class="social">
-    <a href="https://youtube.com/@baba_digital_hub" target="_blank">▶ YouTube</a>
-    <a href="https://www.instagram.com/baba_digital_hub" target="_blank">📸 Instagram</a>
-    <a href="https://www.facebook.com/share/1ADEMGCsip/" target="_blank">📘 Facebook</a>
-    <a href="https://whatsapp.com/channel/0029Vb7JYjrDp2Q02NiWcM28" target="_blank">💬 WhatsApp Channel</a>
-  </div>
+<h2>🎥 YouTube Video</h2>
+<iframe width="100%" height="220"
+src="https://www.youtube.com/embed/JjEzapwtH7Y"
+allowfullscreen></iframe>
 </section>
 
 <section>
-  <h2>📞 Contact</h2>
-  <p>📱 Mobile: 7408313391</p>
-  <p>📍 Address: Gauri Bazar, Deoria (UP)</p>
-  <p>📧 Email: pawanbabapawan91@gmail.com</p>
+<h2>🌐 Social Media</h2>
+<div class="social">
+<a href="https://youtube.com/@baba_digital_hub" target="_blank">▶ YouTube</a>
+<a href="https://www.instagram.com/baba_digital_hub" target="_blank">📸 Instagram</a>
+<a href="https://www.facebook.com/share/1ADEMGCsip/" target="_blank">📘 Facebook</a>
+<a href="https://whatsapp.com/channel/0029Vb7JYjrDp2Q02NiWcM28" target="_blank">💬 WhatsApp Channel</a>
+</div>
+</section>
+
+<section>
+<h2>📞 Contact</h2>
+<p>📱 Mobile: 7408313391</p>
+<p>📍 Address: Gauri Bazar, Deoria (UP)</p>
+<p>📧 Email: pawanbabapawan91@gmail.com</p>
 </section>
 
 <a class="whatsapp" href="https://wa.me/917408313391" target="_blank">WhatsApp</a>
 
 <footer>
-  © 2026 Pawan Baba Jan Sewa Kendra
+© 2026 Pawan Baba Jan Sewa Kendra
 </footer>
 
 <script>
+function sendService(service){
+  window.open("https://wa.me/917408313391?text=Service Required: "+service);
+}
+function subscribePlan(plan){
+  window.open("https://wa.me/917408313391?text=Subscription Required: "+plan);
+}
 function sendWhatsApp(){
   let n=document.getElementById('name').value;
   let m=document.getElementById('mobile').value;
   let s=document.getElementById('service').value;
   let msg=`Name: ${n}%0AMobile: ${m}%0AService: ${s}`;
   window.open("https://wa.me/917408313391?text="+msg);
-}
-function sendService(service){
-  window.open("https://wa.me/917408313391?text=Service Required: "+service);
 }
 </script>
 
