@@ -10,14 +10,14 @@ body{margin:0;font-family:Arial;background:#f2f4f7}
 header{background:#0d6efd;color:#fff;padding:25px;text-align:center}
 section{background:#fff;margin:15px;padding:15px;border-radius:12px}
 h2{color:#0d6efd;margin-top:0}
-h3{margin:6px 0}
 .operator{display:flex;gap:15px;align-items:center}
 .operator img{width:90px;height:90px;border-radius:50%;border:3px solid #0d6efd}
+
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .card{
   display:block;
   border:1px solid #ddd;
-  padding:12px;
+  padding:14px;
   border-radius:10px;
   text-align:center;
   font-weight:bold;
@@ -25,10 +25,11 @@ h3{margin:6px 0}
   color:#000;
 }
 .card:hover{background:#0d6efd;color:#fff}
-.price{color:#198754;font-size:14px}
-.note{font-size:13px;color:#555}
+.price{font-size:13px;color:#198754}
+
 .pay{text-align:center}
 .pay img{width:220px;border:1px solid #ccc;border-radius:10px}
+
 .btn{
   display:block;
   margin-top:10px;
@@ -39,16 +40,32 @@ h3{margin:6px 0}
   border-radius:8px;
   font-weight:bold;
 }
+
 .video iframe{width:100%;height:220px;border-radius:10px}
-.social a{display:inline-block;margin:6px;font-weight:bold;text-decoration:none;color:#0d6efd}
+
+.social a{
+  display:inline-block;
+  margin:6px;
+  font-weight:bold;
+  text-decoration:none;
+  color:#0d6efd;
+}
+
 .whatsapp{
   position:fixed;right:15px;bottom:15px;
   background:#25D366;color:#fff;
   padding:12px 18px;border-radius:30px;
   text-decoration:none;font-weight:bold
 }
+
+.note{
+  background:#fff3cd;
+  padding:10px;
+  border-radius:8px;
+  font-size:14px;
+}
+
 footer{background:#222;color:#fff;text-align:center;padding:12px;font-size:14px}
-.trust{background:#e9f5ff;padding:10px;border-radius:8px;font-size:13px}
 </style>
 </head>
 
@@ -73,39 +90,40 @@ Jan Sewa Kendra Operator<br>
 </section>
 
 <section>
-<h2>🛠 Jan Sewa Kendra Services (Click Kare)</h2>
+<h2>🛠 Jan Sewa Kendra Services (Click to Order)</h2>
+
 <div class="grid">
 
-<a class="card" href="https://wa.me/917408313391?text=Aadhaar%20Service" target="_blank">
+<a class="card" href="https://wa.me/917408313391?text=SERVICE:%20Aadhaar%20Services%0ACustomer%20Name:%0AMobile%20Number:%0AVillage/City:" target="_blank">
 Aadhaar Services<br><span class="price">Apply / Update</span>
 </a>
 
-<a class="card" href="https://wa.me/917408313391?text=PAN%20Card" target="_blank">
+<a class="card" href="https://wa.me/917408313391?text=SERVICE:%20PAN%20Card%0ACustomer%20Name:%0AMobile%20Number:%0AVillage/City:" target="_blank">
 PAN Card<br><span class="price">New / Correction</span>
 </a>
 
-<a class="card" href="https://wa.me/917408313391?text=Ayushman%20Card" target="_blank">
-Ayushman Card<br><span class="price">Apply</span>
+<a class="card" href="https://wa.me/917408313391?text=SERVICE:%20Ayushman%20Card%0ACustomer%20Name:%0AMobile%20Number:%0AVillage/City:" target="_blank">
+Ayushman Card
 </a>
 
-<a class="card" href="https://wa.me/917408313391?text=Ration%20Card" target="_blank">
-Ration Card<br><span class="price">Apply / Update</span>
+<a class="card" href="https://wa.me/917408313391?text=SERVICE:%20Ration%20Card%0ACustomer%20Name:%0AMobile%20Number:%0AVillage/City:" target="_blank">
+Ration Card
 </a>
 
-<a class="card" href="https://wa.me/917408313391?text=Income%20Certificate" target="_blank">
-Income Certificate<br><span class="price">Online</span>
+<a class="card" href="https://wa.me/917408313391?text=SERVICE:%20Income%20Certificate%0ACustomer%20Name:%0AMobile%20Number:%0AVillage/City:" target="_blank">
+Income Certificate
 </a>
 
-<a class="card" href="https://wa.me/917408313391?text=Caste%20Certificate" target="_blank">
-Caste Certificate<br><span class="price">Online</span>
+<a class="card" href="https://wa.me/917408313391?text=SERVICE:%20Caste%20Certificate%0ACustomer%20Name:%0AMobile%20Number:%0AVillage/City:" target="_blank">
+Caste Certificate
 </a>
 
-<a class="card" href="https://wa.me/917408313391?text=Residence%20Certificate" target="_blank">
+<a class="card" href="https://wa.me/917408313391?text=SERVICE:%20Residence%20Certificate%0ACustomer%20Name:%0AMobile%20Number:%0AVillage/City:" target="_blank">
 Residence Certificate
 </a>
 
-<a class="card" href="https://wa.me/917408313391?text=Online%20Form%20Filling" target="_blank">
-Online Form Filling<br><span class="price">Jobs / Admission</span>
+<a class="card" href="https://wa.me/917408313391?text=SERVICE:%20Online%20Form%20Filling%0ACustomer%20Name:%0AMobile%20Number:%0AVillage/City:" target="_blank">
+Online Form Filling
 </a>
 
 </div>
@@ -113,10 +131,11 @@ Online Form Filling<br><span class="price">Jobs / Admission</span>
 
 <section>
 <h2>📦 Monthly Subscription</h2>
-<h3>₹45 / Month</h3>
-<p>✔ Priority service<br>✔ WhatsApp support<br>✔ Online form help</p>
-<a class="btn" href="https://wa.me/917408313391?text=Subscription%20₹45%20Required" target="_blank">
-Subscription Lene ke liye WhatsApp kare
+<p><b>₹45 / Month</b></p>
+<p>✔ Priority Service<br>✔ WhatsApp Support<br>✔ Online Form Help</p>
+
+<a class="btn" href="https://wa.me/917408313391?text=SERVICE:%20Monthly%20Subscription%20₹45%0ACustomer%20Name:%0AMobile%20Number:" target="_blank">
+Subscription lene ke liye WhatsApp kare
 </a>
 </section>
 
@@ -124,16 +143,21 @@ Subscription Lene ke liye WhatsApp kare
 <h2>💳 Online Payment</h2>
 <img src="upi-qr.jpg">
 <p><b>UPI ID:</b> gpay-11264623678@okbizaxis</p>
-<p class="note">Payment ke baad WhatsApp par screenshot bheje</p>
+
+<div class="note">
+📌 Payment ke baad WhatsApp par  
+<b>Name + Mobile + Screenshot</b> bhejna zaroori hai
+</div>
 </section>
 
 <section>
 <h2>🎓 Training & Digital Services</h2>
 <div class="grid">
-<a class="card" href="https://wa.me/917408313391?text=CSC%20Training" target="_blank">
+<a class="card" href="https://wa.me/917408313391?text=SERVICE:%20CSC%20CSP%20Training%0ACustomer%20Name:%0AMobile%20Number:" target="_blank">
 CSC / CSP Training
 </a>
-<a class="card" href="https://wa.me/917408313391?text=Resume%20Service" target="_blank">
+
+<a class="card" href="https://wa.me/917408313391?text=SERVICE:%20Resume%20PDF%20Service%0ACustomer%20Name:%0AMobile%20Number:" target="_blank">
 Resume / PDF Service
 </a>
 </div>
@@ -152,12 +176,6 @@ Resume / PDF Service
 <a href="https://www.facebook.com/share/1ADEMGCsip/" target="_blank">Facebook</a>
 <a href="https://whatsapp.com/channel/0029Vb7JYjrDp2Q02NiWcM28" target="_blank">WhatsApp Channel</a>
 </div>
-</section>
-
-<section class="trust">
-<b>Important Notice:</b><br>
-Ye website assistance & support services ke liye hai.  
-Biometric aur final approval kaam official government portals / centers par hi hota hai.
 </section>
 
 <a class="whatsapp" href="https://wa.me/917408313391" target="_blank">
