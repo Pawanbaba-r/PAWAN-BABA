@@ -24,16 +24,8 @@ body{
   margin-bottom:20px;
   border-bottom:5px solid #ff9800;
 }
-.header h1{
-  margin:0;
-  color:#0d47a1;
-  font-size:28px;
-}
-.header p{
-  margin:8px 0 0;
-  color:#333;
-  font-weight:bold;
-}
+.header h1{margin:0;color:#0d47a1;font-size:28px}
+.header p{margin:8px 0 0;color:#333;font-weight:bold}
 
 /* FINO NOTICE */
 .notice{
@@ -54,11 +46,7 @@ body{
   padding:16px;
   margin-bottom:20px;
 }
-.card h2{
-  color:#ffeb3b;
-  margin-top:0;
-  text-align:center;
-}
+.card h2{color:#ffeb3b;margin-top:0;text-align:center}
 
 .services{
   display:grid;
@@ -86,12 +74,14 @@ body{
   border-radius:10px;
 }
 
+/* VIDEO */
 .video iframe{
   width:100%;
   height:220px;
   border-radius:10px;
 }
 
+/* SOCIAL */
 .social a{
   display:block;
   text-align:center;
@@ -104,10 +94,60 @@ body{
   background:linear-gradient(90deg,#ff9800,#ff5722);
 }
 
-.note{
-  font-size:13px;
-  text-align:center;
+/* FEEDBACK */
+.feedback input, .feedback textarea{
+  width:100%;
+  padding:10px;
+  margin:6px 0;
+  border-radius:6px;
+  border:none;
+}
+.feedback button{
+  width:100%;
+  padding:12px;
+  background:#ff9800;
+  border:none;
+  color:#000;
+  font-weight:bold;
+  border-radius:8px;
+}
+
+/* HELP BOT */
+.bot-btn{
+  position:fixed;
+  right:15px;
+  bottom:15px;
+  background:#ff9800;
+  color:#000;
+  padding:12px 16px;
+  border-radius:30px;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+.bot-box{
+  position:fixed;
+  right:15px;
+  bottom:70px;
+  width:280px;
+  background:#fff;
+  border-radius:12px;
+  display:none;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}
+.bot-header{
+  background:#0d47a1;
   color:#fff;
+  padding:10px;
+  border-radius:12px 12px 0 0;
+  font-weight:bold;
+}
+.bot-content{
+  padding:10px;
+  font-size:14px;
+}
+.bot-content p{
+  margin:6px 0;
 }
 
 .footer{
@@ -152,10 +192,6 @@ body{
     <div class="service">Online Job / Exam Forms <span class="rate">₹100</span></div>
     <div class="service">School / College Admission <span class="rate">₹100</span></div>
   </div>
-
-  <p class="note">
-    ✔ Assistance services only. Final approval official portals par hota hai.
-  </p>
 </div>
 
 <!-- PAYMENT -->
@@ -170,38 +206,54 @@ body{
 <!-- VIDEO -->
 <div class="card video">
   <h2>Training Video</h2>
-  <iframe src="https://www.youtube.com/embed/JjEzapwtH7Y"
-          allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/JjEzapwtH7Y" allowfullscreen></iframe>
 </div>
 
-<!-- SOCIAL LINKS -->
+<!-- SOCIAL -->
 <div class="card">
   <h2>Follow Baba Digital Hub</h2>
-
   <div class="social">
-    <a href="https://whatsapp.com/channel/0029Vb7JYjrDp2Q02NiWcM28" target="_blank">
-      WhatsApp Channel
-    </a>
-
-    <a href="https://youtube.com/@baba_digital_hub" target="_blank">
-      YouTube Channel
-    </a>
-
-    <a href="https://www.instagram.com/baba_digital_hub" target="_blank">
-      Instagram
-    </a>
-
-    <a href="https://www.facebook.com/share/1ADEMGCsip/" target="_blank">
-      Facebook
-    </a>
+    <a href="https://whatsapp.com/channel/0029Vb7JYjrDp2Q02NiWcM28" target="_blank">WhatsApp Channel</a>
+    <a href="https://youtube.com/@baba_digital_hub" target="_blank">YouTube Channel</a>
+    <a href="https://www.instagram.com/baba_digital_hub" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/share/1ADEMGCsip/" target="_blank">Facebook</a>
   </div>
 </div>
 
+<!-- FEEDBACK -->
+<div class="card feedback">
+  <h2>⭐ Feedback</h2>
+  <input type="text" placeholder="Aapka Naam">
+  <textarea rows="4" placeholder="Apna feedback yahan likhe..."></textarea>
+  <button onclick="alert('Thank you! Aapka feedback mil gaya 👍')">Submit Feedback</button>
+</div>
+
+</div>
+
+<!-- HELP BOT -->
+<div class="bot-btn" onclick="toggleBot()">🤖 Help</div>
+
+<div class="bot-box" id="bot">
+  <div class="bot-header">Help Bot</div>
+  <div class="bot-content">
+    <p>👋 Namaste! Main madad ke liye hoon.</p>
+    <p>📄 Aadhaar / PAN / Certificate services available</p>
+    <p>💰 Payment: UPI QR ya UPI ID</p>
+    <p>📞 Call: 7408313391</p>
+    <p>⏰ Timing: 9 AM – 6 PM</p>
+  </div>
 </div>
 
 <div class="footer">
 © 2026 Baba Digital Hub
 </div>
+
+<script>
+function toggleBot(){
+  var b=document.getElementById("bot");
+  b.style.display = (b.style.display==="block") ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
