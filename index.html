@@ -2,78 +2,163 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<title>BABA DIGITAL HUB</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baba Digital Hub</title>
+
 <style>
-body{margin:0;font-family:Arial;background:#f2f4f7}
-header{background:#0d6efd;color:#fff;padding:20px;text-align:center}
-.card{background:#fff;margin:12px;padding:15px;border-radius:10px}
-h3{margin-top:0}
-.btn{display:block;background:#0d6efd;color:#fff;
-text-decoration:none;padding:12px;text-align:center;
-border-radius:8px;margin-top:10px}
-.services a{display:block;padding:10px;border-bottom:1px solid #ddd;
-text-decoration:none;color:#000}
-footer{background:#111;color:#fff;text-align:center;padding:15px}
-iframe{width:100%;border:none;border-radius:10px}
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#0d47a1,#c62828);
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:15px;
+}
+.header{
+  background:#fff;
+  border-radius:12px;
+  padding:20px;
+  text-align:center;
+  margin-bottom:20px;
+}
+.header img{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  border:4px solid #c62828;
+  object-fit:cover;
+}
+.header h1{
+  margin:10px 0 5px;
+  color:#0d47a1;
+}
+.header p{
+  margin:0;
+  color:#333;
+}
+
+.card{
+  background:#fff;
+  border-radius:12px;
+  padding:15px;
+  margin-bottom:20px;
+}
+.card h2{
+  color:#c62828;
+  margin-top:0;
+  text-align:center;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:10px;
+}
+.service{
+  background:#f6f6f6;
+  padding:12px;
+  border-radius:10px;
+  text-align:center;
+  font-weight:bold;
+}
+
+.payment img{
+  width:220px;
+  display:block;
+  margin:10px auto;
+}
+
+.social a{
+  display:block;
+  text-align:center;
+  margin:8px 0;
+  padding:10px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  color:#fff;
+  background:linear-gradient(90deg,#0d47a1,#c62828);
+}
+
+.footer{
+  text-align:center;
+  color:#fff;
+  font-size:14px;
+  padding:15px 0;
+}
+.note{
+  font-size:13px;
+  text-align:center;
+  color:#555;
+}
 </style>
 </head>
 
 <body>
+<div class="container">
 
-<header>
-<h1>Pawan Baba Jan Sewa Kendra</h1>
-<p>CSC / Government Online Services</p>
-</header>
+<!-- HEADER -->
+<div class="header">
+  <!-- PHOTO ON -->
+  <img src="profile.jpg" alt="Baba Digital Hub">
+  <h1>Baba Digital Hub</h1>
+  <p>CSC | Jan Seva | Online Government Services</p>
+</div>
 
+<!-- SERVICES -->
 <div class="card">
-<h3>👤 Operator</h3>
-<p><b>Pawan Baba</b><br>Gauri Bazar, Deoria (UP)</p>
+  <h2>CSC / Government Services</h2>
+  <div class="services">
+    <div class="service">Aadhaar Apply / Update</div>
+    <div class="service">PAN Card (New / Correction)</div>
+    <div class="service">Ayushman Bharat Card</div>
+    <div class="service">Ration Card</div>
+    <div class="service">Income Certificate</div>
+    <div class="service">Caste Certificate</div>
+    <div class="service">Domicile Certificate</div>
+    <div class="service">PM Jan Dhan Account</div>
+    <div class="service">Insurance Services</div>
+    <div class="service">AEPS Services</div>
+    <div class="service">Online Job / Exam Forms</div>
+    <div class="service">School / College Admission</div>
+  </div>
+  <p class="note">✔ Assistance services only. Final approval official portals par hota hai.</p>
 </div>
 
-<div class="card services">
-<h3>🛠 CSC / Government Services</h3>
-<a>✔ Aadhaar Apply / Update</a>
-<a>✔ PAN Card (New / Correction)</a>
-<a>✔ Ayushman Bharat Card</a>
-<a>✔ Ration Card</a>
-<a>✔ Income / Caste / Domicile Certificate</a>
-<a>✔ PM Jan Dhan Account</a>
-<a>✔ Insurance & Banking Services</a>
-<a>✔ Online Job Forms</a>
-<a>✔ College / School Admission Forms</a>
+<!-- PAYMENT -->
+<div class="card payment">
+  <h2>Online Payment (UPI)</h2>
+  <img src="upi-qr.jpg" alt="UPI QR">
+  <p style="text-align:center;"><b>UPI ID:</b> gpay-11264623678@okbizaxis</p>
+  <p class="note">Payment ke baad screenshot WhatsApp par bheje.</p>
 </div>
 
+<!-- VIDEO -->
 <div class="card">
-<h3>💰 Online Payment (UPI)</h3>
-<p><b>UPI ID:</b> gpay-11264623678@okbizaxis</p>
-<p>Payment ke baad screenshot upload kare</p>
+  <h2>Training Video</h2>
+  <iframe width="100%" height="220"
+    src="https://www.youtube.com/embed/JjEzapwtH7Y"
+    allowfullscreen></iframe>
 </div>
 
+<!-- SOCIAL -->
 <div class="card">
-<h3>📝 Online Order Form</h3>
-<iframe height="650"
-src="https://docs.google.com/forms/d/e/1FAIpQLScG3A3BQ6q_DGEi5vFJ1zTo66PhzlPXf5gKVY_SKEpYNhJKHQ/viewform">
-</iframe>
+  <h2>Follow Baba Digital Hub</h2>
+  <div class="social">
+    <a href="https://youtube.com/@baba_digital_hub" target="_blank">YouTube</a>
+    <a href="https://www.instagram.com/baba_digital_hub" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/share/1ADEMGCsip/" target="_blank">Facebook</a>
+    <a href="https://whatsapp.com/channel/0029Vb7JYjrDp2Q02NiWcM28" target="_blank">WhatsApp Channel</a>
+  </div>
 </div>
 
-<div class="card">
-<h3>🎥 Video Guide</h3>
-<iframe height="220"
-src="https://www.youtube.com/embed/JjEzapwtH7Y"></iframe>
 </div>
 
-<div class="card">
-<h3>🌐 Social Links</h3>
-<a class="btn" href="https://www.instagram.com/baba_digital_hub">Instagram</a>
-<a class="btn" href="https://www.facebook.com/share/1ADEMGCsip/">Facebook</a>
-<a class="btn" href="https://youtube.com/@baba_digital_hub">YouTube</a>
-<a class="btn" href="https://whatsapp.com/channel/0029Vb7JYjrDp2Q02NiWcM28">WhatsApp Channel</a>
+<div class="footer">
+© 2026 Baba Digital Hub
 </div>
-
-<footer>
-© 2026 Pawan Baba Jan Sewa Kendra
-</footer>
 
 </body>
 </html>
