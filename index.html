@@ -6,6 +6,7 @@
 <title>AI Image Prompt Generator</title>
 
 <style>
+
 body{
   margin:0;
   font-family:Arial,sans-serif;
@@ -14,7 +15,7 @@ body{
 }
 
 .container{
-  max-width:900px;
+  max-width:1000px;
   margin:auto;
   padding:15px;
 }
@@ -59,18 +60,25 @@ button{
   font-size:16px;
   font-weight:bold;
   margin-top:10px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#1565c0;
 }
 
 .sample{
   background:#f5f5f5;
-  padding:10px;
+  padding:12px;
   border-radius:10px;
   margin-bottom:10px;
   cursor:pointer;
+  transition:0.3s;
 }
 
 .sample:hover{
   background:#ffe0b2;
+  transform:scale(1.02);
 }
 
 .output{
@@ -80,6 +88,7 @@ button{
   border-radius:10px;
   min-height:80px;
   white-space:pre-wrap;
+  font-size:14px;
 }
 
 .footer{
@@ -87,6 +96,7 @@ button{
   padding:10px;
   font-size:13px;
 }
+
 </style>
 </head>
 
@@ -96,58 +106,88 @@ button{
 
 <div class="header">
   <h1>🎨 AI Image Prompt Generator</h1>
-  <p>ChatGPT / AI image banane ke liye prompt generate kare</p>
+  <p>Professional AI Prompt Creator For ChatGPT / AI Image Tools</p>
 </div>
 
-<!-- USER INPUT -->
+<!-- INPUT -->
 <div class="card">
-  <h2>✍️ Prompt Likhe</h2>
 
-  <textarea id="idea" placeholder="Example:
-Ek realistic lion jungle me 4K cinematic style me"></textarea>
+<h2>✍️ Prompt Idea Likhe</h2>
 
-  <button onclick="generatePrompt()">Generate Prompt</button>
+<textarea id="idea" placeholder="Example:
+A futuristic lion king sitting on a golden throne in cyberpunk city"></textarea>
+
+<button onclick="generatePrompt()">🚀 Generate AI Prompt</button>
+
 </div>
 
 <!-- OUTPUT -->
 <div class="card">
-  <h2>🤖 Generated Prompt</h2>
 
-  <div class="output" id="output">
-Yahan generated prompt dikhega...
-  </div>
+<h2>🤖 Generated Prompt</h2>
 
-  <button onclick="copyPrompt()">📋 Copy Prompt</button>
+<div class="output" id="output">
+Yahan AI generated prompt dikhega...
+</div>
+
+<button onclick="copyPrompt()">📋 Copy Prompt</button>
+
 </div>
 
 <!-- SAMPLE PROMPTS -->
 <div class="card">
-  <h2>🔥 Sample Prompts</h2>
 
-  <div class="sample"
-  onclick="setSample('A futuristic Indian village with flying cars, ultra realistic, cinematic lighting, 8K')">
-  🚀 Futuristic Indian Village
-  </div>
+<h2>🔥 Premium Sample Prompts</h2>
 
-  <div class="sample"
-  onclick="setSample('A realistic tiger wearing sunglasses sitting on a royal throne, ultra HD, dramatic lighting')">
-  🐯 Royal Tiger
-  </div>
+<div class="sample"
+onclick="setSample('A futuristic Indian village with flying cars, ultra realistic, cinematic lighting, 8K, masterpiece')">
+🚀 Futuristic Indian Village
+</div>
 
-  <div class="sample"
-  onclick="setSample('A beautiful anime girl in rain, neon city background, cinematic anime style')">
-  🌧️ Anime Girl
-  </div>
+<div class="sample"
+onclick="setSample('A realistic tiger wearing sunglasses sitting on a royal throne, ultra HD, dramatic lighting, golden crown')">
+🐯 Royal Tiger King
+</div>
 
-  <div class="sample"
-  onclick="setSample('A cyberpunk Baba Digital Hub shop glowing at night, ultra realistic, 4K')">
-  🏪 Cyberpunk Shop
-  </div>
+<div class="sample"
+onclick="setSample('A beautiful anime girl standing in rain with neon lights, cinematic anime style, ultra detailed')">
+🌧️ Anime Girl In Rain
+</div>
 
-  <div class="sample"
-  onclick="setSample('Lord Shiva meditating in Himalayas, divine aura, ultra realistic spiritual art')">
-  🕉️ Lord Shiva Art
-  </div>
+<div class="sample"
+onclick="setSample('A cyberpunk Baba Digital Hub shop glowing at night, futuristic Indian market, ultra realistic, 4K')">
+🏪 Cyberpunk Digital Shop
+</div>
+
+<div class="sample"
+onclick="setSample('Lord Shiva meditating in Himalayas with divine blue aura, ultra realistic spiritual art, 8K')">
+🕉️ Lord Shiva Art
+</div>
+
+<div class="sample"
+onclick="setSample('A giant dragon flying over futuristic Tokyo city at sunset, cinematic lighting, ultra realistic')">
+🐉 Dragon In Tokyo
+</div>
+
+<div class="sample"
+onclick="setSample('A luxury black Lamborghini parked in Dubai at night, neon reflections, ultra HD, cinematic')">
+🏎️ Luxury Lamborghini Dubai
+</div>
+
+<div class="sample"
+onclick="setSample('A realistic astronaut walking on Mars with Indian flag, cinematic sci-fi scene, ultra detailed')">
+🚀 Indian Astronaut On Mars
+</div>
+
+<div class="sample"
+onclick="setSample('A powerful Hindu king standing in battlefield with fire background, ultra realistic warrior art')">
+⚔️ Hindu Warrior King
+</div>
+
+<div class="sample"
+onclick="setSample('A cute baby panda eating noodles in Japanese street market, Pixar style, adorable lighting')">
+🐼 Cute Panda
+</div>
 
 </div>
 
@@ -164,14 +204,14 @@ function generatePrompt(){
   var idea = document.getElementById("idea").value;
 
   if(idea==""){
-    alert("Pehle idea likhe");
+    alert("Pehle prompt idea likhe");
     return;
   }
 
   var finalPrompt =
-  "Ultra realistic, highly detailed, cinematic lighting, 4K HD, professional AI art of: "
+  "Ultra realistic, highly detailed, cinematic lighting, professional AI artwork, 4K HD, masterpiece quality of: "
   + idea +
-  ". Trending on ArtStation, masterpiece quality.";
+  ". Trending on ArtStation, hyper detailed, realistic shadows, epic composition.";
 
   document.getElementById("output").innerText = finalPrompt;
 }
@@ -182,7 +222,7 @@ function copyPrompt(){
 
   navigator.clipboard.writeText(text);
 
-  alert("Prompt copied!");
+  alert("Prompt copied successfully!");
 }
 
 function setSample(text){
